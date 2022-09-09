@@ -1,0 +1,63 @@
+gameplay:
+mountains
+mine
+village
+
+-- TYPES OF LOCATIONS: --
+
+- free
+- barrier
+- building []
+- water []
+- object []
+
+[] = id needed
+
+OR NOT!!!
+map (list)
+   |
+   V
+Location -----------------,
+   |                      |
+   V                      V
+Perimeter              Contents
+   |                      |
+   V                      V
+Exits/Entrances        Objects
+   |
+   V
+Doors
+
+
+
+Location:
+name
+synonyms
+perimeter {N:{type: Wall OpenWall, area:someareaname} S-- E-- W-- U-- D--}
+contents []
+light
+description
+
+House(Location):
+doors
+windows
+
+Perimeter:
+name
+
+
+OpenWall(Perimeter):
+inheret(name)
+
+
+Wall(Perimeter):
+inheret(name)
+hasdoor
+doors[]
+
+
+Door:
+name
+isopen
+islocked
+keyid
